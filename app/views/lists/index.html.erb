@@ -1,1 +1,10 @@
 <h1>These are all the lists of movies</h1>
+<div class="container">
+  <% @lists.each do |list| %>
+  <%= link_to list_path(list), class: "text-decoration-none" do %>
+  <%= list.name %>
+  <% end %>
+  <% end %>
+</div>
+
+ 

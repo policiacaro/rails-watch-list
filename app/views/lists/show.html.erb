@@ -1,0 +1,14 @@
+<h1><%= @list.name %></h1>
+  <%= link_to new_list_bookmark_path(@list), class: "text-decoration-none" do %>
+<p>add some movies</p>
+  <%#= @list.name %>
+  <% end %>
+<%#= simple_form_for @bookmark do |f| %>
+<%#= f.associations :movie, include_blank: false, collection: @movies %>
+<%#= f.submit 'add' %>
+<% @list.bookmarks.each do |bookmark| %>
+<%= bookmark.movie.title %>
+<%= bookmark.movie.rating %>
+<% end %>
+
+  <%= link_to "go back", lists_path(@list), class: "text-decoration-none" %>

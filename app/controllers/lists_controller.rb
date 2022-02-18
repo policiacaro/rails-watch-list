@@ -9,6 +9,7 @@ class ListsController < ApplicationController
 
   def new
     @list = List.new
+    # @bookmark = Bookmark.new
   end
 
   def create
